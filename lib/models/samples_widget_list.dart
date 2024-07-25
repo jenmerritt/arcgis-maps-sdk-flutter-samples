@@ -24,6 +24,7 @@ import 'package:arcgis_maps_sdk_flutter_samples/samples/find_route/find_route_sa
 import 'package:arcgis_maps_sdk_flutter_samples/samples/generate_offline_map/generate_offline_map_sample.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/identify_layer_features/identify_layer_features_sample.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/query_feature_table/query_feature_table_sample.dart';
+import 'package:arcgis_maps_sdk_flutter_samples/samples/query_related_features/query_related_features_sample.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/query_table_statistics/query_table_statistics_sample.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/search_with_geocode/search_with_geocode_sample.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/select_features_in_feature_layer/select_features_in_feature_layer_sample.dart';
@@ -73,6 +74,7 @@ const sampleWidgets = <String, Widget>{
   'generate_offline_map': GenerateOfflineMapSample(),
   'identify_layer_features': IdentifyLayerFeaturesSample(),
   'query_feature_table': QueryFeatureTableSample(),
+  'query_related_feature': QueryRelatedFeaturesSample(),
   'query_table_statistics': QueryTableStatisticsSample(),
   'search_with_geocode': SearchWithGeocodeSample(),
   'select_features_in_feature_layer': SelectFeaturesInFeatureLayerSample(),
