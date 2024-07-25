@@ -25,27 +25,10 @@ class _QueryRelatedFeaturesSampleState extends State<QueryRelatedFeaturesSample>
         top: false,
         child: Stack(
           children: [
-            Column(
-              children: [
-                Expanded(
-                  // Add a map view to the widget tree and set a controller.
-                  child: ArcGISMapView(
-                    controllerProvider: () => _mapViewController,
-                    onMapViewReady: onMapViewReady,
-                    onTap: onTap,
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // A button to perform a task.
-                    ElevatedButton(
-                      onPressed: performTask,
-                      child: const Text('Perform Task'),
-                    ),
-                  ],
-                ),
-              ],
+            ArcGISMapView(
+              controllerProvider: () => _mapViewController,
+              onMapViewReady: onMapViewReady,
+              onTap: onTap,
             ),
             // Display a progress indicator and prevent interaction until state is ready.
             Visibility(
@@ -66,21 +49,12 @@ class _QueryRelatedFeaturesSampleState extends State<QueryRelatedFeaturesSample>
   void onMapViewReady() async {
     final map = ArcGISMap.withBasemapStyle(BasemapStyle.arcGISTopographic);
     _mapViewController.arcGISMap = map;
-    // Perform some long-running setup task.
-    await Future.delayed(const Duration(seconds: 10));
+
     // Set the ready state variable to true to enable the sample UI.
     setState(() => _ready = true);
   }
 
   void onTap(Offset offset) {
     print('Tapped at $offset');
-  }
-
-  void performTask() async {
-    setState(() => _ready = false);
-    // Perform some task.
-    print('Perform task');
-    await Future.delayed(const Duration(seconds: 5));
-    setState(() => _ready = true);
   }
 }

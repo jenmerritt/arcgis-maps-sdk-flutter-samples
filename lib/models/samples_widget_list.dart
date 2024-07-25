@@ -74,7 +74,7 @@ const sampleWidgets = <String, Widget>{
   'generate_offline_map': GenerateOfflineMapSample(),
   'identify_layer_features': IdentifyLayerFeaturesSample(),
   'query_feature_table': QueryFeatureTableSample(),
-  'query_related_feature': QueryRelatedFeaturesSample(),
+  'query_related_features': QueryRelatedFeaturesSample(),
   'query_table_statistics': QueryTableStatisticsSample(),
   'search_with_geocode': SearchWithGeocodeSample(),
   'select_features_in_feature_layer': SelectFeaturesInFeatureLayerSample(),
