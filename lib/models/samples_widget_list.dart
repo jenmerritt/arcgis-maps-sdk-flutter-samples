@@ -13,7 +13,7 @@ import 'package:arcgis_maps_sdk_flutter_samples/samples/authenticate_with_oauth/
 import 'package:arcgis_maps_sdk_flutter_samples/samples/authenticate_with_token/authenticate_with_token.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/create_mobile_geodatabase/create_mobile_geodatabase.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/create_planar_and_geodetic_buffers/create_planar_and_geodetic_buffers.dart';
-import 'package:arcgis_maps_sdk_flutter_samples/samples/cut_geometry/cut_geometry_sample.dart';
+import 'package:arcgis_maps_sdk_flutter_samples/samples/cut_geometry/cut_geometry.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/densify_and_generalize_geometry/densify_and_generalize_geometry.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/display_clusters/display_clusters.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/display_map/display_map.dart';
@@ -33,6 +33,7 @@ import 'package:arcgis_maps_sdk_flutter_samples/samples/query_related_features/q
 import 'package:arcgis_maps_sdk_flutter_samples/samples/query_table_statistics/query_table_statistics.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/select_features_in_feature_layer/select_features_in_feature_layer.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/set_basemap/set_basemap.dart';
+import 'package:arcgis_maps_sdk_flutter_samples/samples/set_reference_scale/set_reference_scale.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/show_device_location/show_device_location.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/show_device_location_history/show_device_location_history.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/show_grid/show_grid.dart';
@@ -67,7 +68,7 @@ final sampleWidgets = <String, Function>{
   'create_mobile_geodatabase': () => const CreateMobileGeodatabase(),
   'create_planar_and_geodetic_buffers': () =>
       const CreatePlanarAndGeodeticBuffers(),
-  'cut_geometry': () => const CutGeometrySample(),
+  'cut_geometry': () => const CutGeometry(),
   'densify_and_generalize_geometry': () => const DensifyAndGeneralizeGeometry(),
   'display_clusters': () => const DisplayClusters(),
   'display_map': () => const DisplayMap(),
@@ -93,6 +94,7 @@ final sampleWidgets = <String, Function>{
   'select_features_in_feature_layer': () =>
       const SelectFeaturesInFeatureLayer(),
   'set_basemap': () => const SetBasemap(),
+  'set_reference_scale': () => const SetReferenceScale(),
   'show_device_location': () => const ShowDeviceLocation(),
   'show_device_location_history': () => const ShowDeviceLocationHistory(),
   'show_grid': () => const ShowGrid(),

@@ -116,6 +116,9 @@ class _DownloadVectorTilesToLocalCacheState
 
   // the method to be called when the map view is ready
   void onMapViewReady() {
+    // disable the map view's rotation.
+    _mapViewController.interactionOptions.rotateEnabled = false;
+
     setupInitialMapView();
     // Set the ready state variable to true to enable the sample UI.
     setState(() => _ready = true);
@@ -263,7 +266,8 @@ class _DownloadVectorTilesToLocalCacheState
     final locationTopLeft =
         _mapViewController.screenToLocation(screen: mapLocalScreenRect.topLeft);
     final locationBottomRight = _mapViewController.screenToLocation(
-        screen: mapLocalScreenRect.bottomRight);
+      screen: mapLocalScreenRect.bottomRight,
+    );
     if (locationTopLeft == null || locationBottomRight == null) return null;
 
     // Create an Envelope from the map coordinates.
@@ -274,7 +278,8 @@ class _DownloadVectorTilesToLocalCacheState
   Future<String> _getDownloadDirectory() async {
     final directory = await getApplicationDocumentsDirectory();
     final resourceDirectory = Directory(
-        '${directory.path}${Platform.pathSeparator}StyleItemResources');
+      '${directory.path}${Platform.pathSeparator}StyleItemResources',
+    );
     if (resourceDirectory.existsSync()) {
       resourceDirectory.deleteSync(recursive: true);
     }

@@ -342,13 +342,38 @@
   },
   "authenticate_with_oauth": {
     "category": "Cloud and Portal",
-    "description": "Authenticate with ArcGIS Online (or your own portal) using OAuth2 to access secured resources (such as private web maps or layers).",
+    "description": "Authenticate with ArcGIS Online (or your own portal) using OAuth2 to access secured resources (such as private web maps or layers). Accessing secured items requires logging in to the portal that hosts them (an ArcGIS Online account, for example).",
     "ignore": false,
-    "images": [],
-    "keywords": [],
+    "images": [
+      "authenticate_with_oauth.png",
+      "authenticate_with_oauth_loaded.png"
+    ],
+    "keywords": [
+      "OAuth",
+      "authentication",
+      "cloud",
+      "credential",
+      "portal",
+      "security",
+      "ArcGISAuthenticationChallengeHandler",
+      "AuthenticationManager",
+      "OAuthConfiguration",
+      "OAuthUserCredential",
+      "Portal",
+      "PortalItem"
+    ],
     "redirect_from": [],
-    "relevant_apis": [],
-    "snippets": [],
+    "relevant_apis": [
+      "ArcGISAuthenticationChallengeHandler",
+      "AuthenticationManager",
+      "OAuthConfiguration",
+      "OAuthUserCredential",
+      "Portal",
+      "PortalItem"
+    ],
+    "snippets": [
+      "authenticate_with_oauth.dart"
+    ],
     "title": "Authenticate with OAuth",
     "key": "authenticate_with_oauth"
   },
@@ -1093,6 +1118,32 @@
     ],
     "title": "Set basemap",
     "key": "set_basemap"
+  },
+  "set_reference_scale": {
+    "category": "Maps",
+    "description": "Set the map's reference scale and which feature layers should honor the reference scale.",
+    "ignore": false,
+    "images": [
+      "set_reference_scale.png",
+      "set_reference_scale_settings.png"
+    ],
+    "keywords": [
+      "map",
+      "reference scale",
+      "scene",
+      "ArcGISMap",
+      "FeatureLayer"
+    ],
+    "redirect_from": [],
+    "relevant_apis": [
+      "ArcGISMap",
+      "FeatureLayer"
+    ],
+    "snippets": [
+      "set_reference_scale.dart"
+    ],
+    "title": "Set reference scale",
+    "key": "set_reference_scale"
   },
   "show_device_location": {
     "category": "Maps",
