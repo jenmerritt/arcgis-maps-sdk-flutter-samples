@@ -28,8 +28,8 @@ import 'package:arcgis_maps_sdk_flutter_samples/samples/find_route/find_route.da
 import 'package:arcgis_maps_sdk_flutter_samples/samples/generate_offline_map/generate_offline_map.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/identify_layer_features/identify_layer_features.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/manage_bookmarks/manage_bookmarks.dart';
-import 'package:arcgis_maps_sdk_flutter_samples/samples/query_related_features/query_related_features_sample.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/query_feature_table/query_feature_table.dart';
+import 'package:arcgis_maps_sdk_flutter_samples/samples/query_related_features/query_related_features_sample.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/query_table_statistics/query_table_statistics.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/select_features_in_feature_layer/select_features_in_feature_layer.dart';
 import 'package:arcgis_maps_sdk_flutter_samples/samples/set_basemap/set_basemap.dart';
@@ -88,6 +88,7 @@ final sampleWidgets = <String, Function>{
   'identify_layer_features': () => const IdentifyLayerFeatures(),
   'manage_bookmarks': () => const ManageBookmarks(),
   'query_feature_table': () => const QueryFeatureTable(),
+  'query_related_features': () => const QueryRelatedFeaturesSample(),
   'query_table_statistics': () => const QueryTableStatistics(),
   'select_features_in_feature_layer': () =>
       const SelectFeaturesInFeatureLayer(),

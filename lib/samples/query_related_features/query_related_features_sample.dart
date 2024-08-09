@@ -18,6 +18,10 @@ class _QueryRelatedFeaturesSampleState extends State<QueryRelatedFeaturesSample>
   // A flag for when the map view is ready and controls can be used.
   var _ready = false;
 
+  late final FeatureLayer _alaskaNationalParksLayer;
+  late final FeatureLayer _alaskaNationalPreservesLayer;
+  late final ServiceFeatureTable _alaskaNationalParksSpeciesTable;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +53,35 @@ class _QueryRelatedFeaturesSampleState extends State<QueryRelatedFeaturesSample>
   void onMapViewReady() async {
     final map = ArcGISMap.withBasemapStyle(BasemapStyle.arcGISTopographic);
     _mapViewController.arcGISMap = map;
+
+    _alaskaNationalParksLayer = FeatureLayer.withFeatureTable(
+      ServiceFeatureTable.withUri(
+        Uri.parse(
+          'https://services2.arcgis.com/ZQgQTuoyBrtmoGdP/ArcGIS/rest/services/AlaskaNationalParksPreservesSpecies_List/FeatureServer/1',
+        ),
+      ),
+    );
+
+    _alaskaNationalPreservesLayer = FeatureLayer.withFeatureTable(
+      ServiceFeatureTable.withUri(
+        Uri.parse(
+          'https://services2.arcgis.com/ZQgQTuoyBrtmoGdP/ArcGIS/rest/services/AlaskaNationalParksPreservesSpecies_List/FeatureServer/0',
+        ),
+      ),
+    );
+
+    _alaskaNationalParksSpeciesTable = ServiceFeatureTable.withUri(
+      Uri.parse(
+        'https://services2.arcgis.com/ZQgQTuoyBrtmoGdP/ArcGIS/rest/services/AlaskaNationalParksPreservesSpecies_List/FeatureServer/2',
+      ),
+    );
+
+    map.operationalLayers.addAll([
+      _alaskaNationalParksLayer,
+      _alaskaNationalPreservesLayer,
+    ]);
+
+    map.tables.add(_alaskaNationalParksSpeciesTable);
 
     // Set the ready state variable to true to enable the sample UI.
     setState(() => _ready = true);
